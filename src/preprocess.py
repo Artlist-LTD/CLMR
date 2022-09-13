@@ -2,6 +2,17 @@ import argparse
 from tqdm import tqdm
 from clmr.datasets import get_dataset
 
+from aistdops.config import cfg
+from aistdops.tracking import start_tracking
+
+dataset_name = "samples2"
+project_name="artbeat-data"
+
+cmlogger, task = start_tracking(
+    experiment_name="CMLR", 
+    project_name=project_name,
+)
+
 def main(args):
     train_dataset = get_dataset(args.dataset, args.dataset_dir, subset="train")
     valid_dataset = get_dataset(args.dataset, args.dataset_dir, subset="valid")

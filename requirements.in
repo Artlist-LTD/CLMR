@@ -1,0 +1,9 @@
+simclr
+torchaudio-augmentations
+torch==1.9.0
+torchaudio
+pytorch-lightning
+soundfile
+sklearn
+matplotlib
+git+https://${GITHUB_TOKEN}@github.com/Artlist-LTD/core.ai.stdops@v0.5.1

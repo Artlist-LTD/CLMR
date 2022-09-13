@@ -1,8 +1,13 @@
-simclr
 torchaudio-augmentations
-torch==1.9.0
 torchaudio
+torch==1.9.0
 pytorch-lightning
+simclr
 soundfile
 sklearn
 matplotlib
+git+https://${GITHUB_TOKEN}@github.com/Artlist-LTD/core.ai.stdops@v0.5.1
+git+https://${GITHUB_TOKEN}@github.com/Artlist-LTD/core.ai.io-utils
+pandas
+clearml==1.6.4
+google-cloud-storage

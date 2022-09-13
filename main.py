@@ -26,17 +26,7 @@ from clmr.models import SampleCNN
 from clmr.modules import ContrastiveLearning, SupervisedLearning
 from clmr.utils import yaml_config_hook
 
-
-if __name__ == "__main__":
-
-    parser = argparse.ArgumentParser(description="CLMR")
-    parser = Trainer.add_argparse_args(parser)
-
-    config = yaml_config_hook("./config/config.yaml")
-    for k, v in config.items():
-        parser.add_argument(f"--{k}", default=v, type=type(v))
-
-    args = parser.parse_args()
+def main(args):
     pl.seed_everything(args.seed)
 
     # ------------
@@ -170,3 +160,16 @@ if __name__ == "__main__":
             device=device,
         )
         print(results)
+
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="CLMR")
+    parser = Trainer.add_argparse_args(parser)
+
+    config = yaml_config_hook("./config/config.yaml")
+    for k, v in config.items():
+        parser.add_argument(f"--{k}", default=v, type=type(v))
+
+    args = parser.parse_args()
+    main(args)

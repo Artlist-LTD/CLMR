@@ -1,0 +1,6 @@
+torch
+torchaudio
+torchaudio-augmentations
+# protobuf
+# google-cloud-storage
+# google-api-core
